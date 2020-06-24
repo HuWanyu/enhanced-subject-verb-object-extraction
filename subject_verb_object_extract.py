@@ -13,9 +13,12 @@
 # limitations under the License.
 
 import en_core_web_sm
+import en_core_web_lg
+import en_core_web_md
+from spacy import displacy
 
-# use spacy small model
-nlp = en_core_web_sm.load()
+# use spacy small/middle/large model
+nlp = en_core_web_md.load()
 
 # dependency markers for subjects
 SUBJECTS = {"nsubj", "nsubjpass", "csubj", "csubjpass", "agent", "expl"}
